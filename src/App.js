@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import React, { Component } from 'react'
 import Navbar from './components/Navbar';
 import News from './components/News';
@@ -7,7 +7,7 @@ import News from './components/News';
 export default class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
       <div>
       <Navbar/>
         <Routes>
@@ -21,7 +21,7 @@ export default class App extends Component {
         <Route exact path="/technology" element={<News key="technology" category="technology"/>} />
         </Routes>
       </div>
-      </BrowserRouter>
+      </HashRouter>
     )
   }
 }
